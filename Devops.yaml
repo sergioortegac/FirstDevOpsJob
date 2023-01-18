@@ -5,7 +5,7 @@ metadata:
   labels:
     app: service-devops
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: service-devops
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: service-devops
-        image: antony0618/simple-devops:latest
+        image: antony0618/servicejava:latest
         ports:
         - containerPort: 8080
 ---
