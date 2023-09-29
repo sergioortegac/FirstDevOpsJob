@@ -18,17 +18,14 @@ pipeline {
          }
         }
         
-     stage ('Docker Build') {
-           steps {
-               script {
-         // Build and push image with Jenkins' docker-plugin
-            withDockerRegistry([credentialsId: "dockerhub", url: "https://index.docker.io/v1/"]) {
-            image = docker.build("antony0618/simple-devops")
-            image.push()    
-            }
-               }
+    stage ("Docker Build") {
+           
+           steps{
+             // docker login  
+             bat(script: 'docker build -t polyglotstudy/servicejava .' , returnStdout:true);
+             bat(script: 'docker push polyglotstudy/servicejava' , returnStdout:true);  
            }
-        }
+       } 
         
          stage ('K8S Deploy') {
             steps {
