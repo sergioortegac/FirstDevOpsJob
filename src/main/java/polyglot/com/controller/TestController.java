@@ -8,6 +8,6 @@ public class TestController {
 
 	@GetMapping("/test")
 	public String TestFirstJob() {
-		return "Welcome to MasterDevops |Tomcat v2.0.0 | KUBERNETES EN AWS, POLYGLOT STUDY 29092023 SERGIO ORTEGA CASTILLO";
+		return "Welcome to MasterDevops |Tomcat v2.0.0 | KUBERNETES EN AWS, POLYGLOT STUDY 29092023 SERGIO ORTEGA CASTILLO - 27-10-2024";
 	}
 }
